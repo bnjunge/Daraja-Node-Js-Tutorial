@@ -30,3 +30,5 @@ the introduction of Daraja and Safaricom, listed below:
 - By going through the tutorials, doen't mean you're good to go LIVE. Alot has to be checked in regards to security. The tutorials are meant to make you understand the working of Daraja API, and then you can develop better secure solutions. This code is for educational purpose ONLY.
 - If there are any changes, error, bugs etc on the code, create an issue so that we maybe able to assist others who may experience the same problem.
 - If you need to communicate to us, write an email to survtechke@gmail.com with *ATTN: BEN* on the subject, also subscribe to our YouTube Channel and Give a star to this project. 
+
+- Lets Get Started.
