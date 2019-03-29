@@ -17,7 +17,7 @@ before you get your hands dirty
 - That you will view the first 4 videos on [Daraja PHP Tutorials](https://www.youtube.com/playlist?list=PLcKuwRUZRXZL36Lb3e5eryz8K4mmrqgqs), in this series, although much has changed since then, we won't be doing
 the introduction of Daraja and Safaricom, listed below:
 
-| Tutorial                                                                                                            |  Minutes Long   |
- --------------------------------------------------------------------------------------------------------------------- -----------------
+|  Tutorial                                                                                                            |  Minutes Long   |
+| -------------------------------------------------------------------------------------------------------------------:| ---------------:|
 | [Intro to Daraja](https://www.youtube.com/watch?v=Xy9qnItAfcU&list=PLcKuwRUZRXZL36Lb3e5eryz8K4mmrqgqs)              | 3.35            |
 | [Intro to Daraja Part 2](https://www.youtube.com/watch?v=xelae0kGnho&list=PLcKuwRUZRXZL36Lb3e5eryz8K4mmrqgqs)       | 3.32            |
