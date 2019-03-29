@@ -20,9 +20,9 @@ the introduction of Daraja and Safaricom, listed below:
 |  Tutorial                                                                                                            |  Minutes Long   |
 | -------------------------------------------------------------------------------------------------------------------:| ---------------:|
 | [Intro to Daraja](https://www.youtube.com/watch?v=Xy9qnItAfcU&list=PLcKuwRUZRXZL36Lb3e5eryz8K4mmrqgqs)              | 3.35            |
-| [Intro to Daraja Part 2](https://www.youtube.com/watch?v=xelae0kGnho&list=PLcKuwRUZRXZL36Lb3e5eryz8K4mmrqgqs)       | 3.32            |
-| [Intro to Daraja Part 3](https://www.youtube.com/watch?v=_JLR6p1vIyQ&t=0s&index=4&list=PLcKuwRUZRXZL36Lb3e5eryz8K4mmrqgqs)       | 3.32            |
-| [Intro to Daraja Part 4](https://www.youtube.com/watch?v=wbZ8niKFbxo&t=17s&index=5&list=PLcKuwRUZRXZL36Lb3e5eryz8K4mmrqgqs)       | 3.32            |
+| [Intro to Daraja Part 2](https://www.youtube.com/watch?v=xelae0kGnho&list=PLcKuwRUZRXZL36Lb3e5eryz8K4mmrqgqs)       | 3.58            |
+| [Intro to Daraja Part 3](https://www.youtube.com/watch?v=_JLR6p1vIyQ&t=0s&index=4&list=PLcKuwRUZRXZL36Lb3e5eryz8K4mmrqgqs)       | 3.57            |
+| [Intro to Daraja Part 4](https://www.youtube.com/watch?v=wbZ8niKFbxo&t=17s&index=5&list=PLcKuwRUZRXZL36Lb3e5eryz8K4mmrqgqs)       | 3.34            |
 
 - So once you've 'understood' what we are about to do, welcome to the Node Js Tutorial fir Daraja API.
 
