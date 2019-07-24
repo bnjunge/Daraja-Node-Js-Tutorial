@@ -26,8 +26,8 @@ app.get('/register', access, (req, resp) => {
             json: {
                 "ShortCode": "600383",
                 "ResponseType": "Complete",
-                "ConfirmationURL": "http://197.248.86.122:801/confirmation",
-                "ValidationURL": "http://197.248.86.122:801/validation"
+                "ConfirmationURL": "{{your_url}}/confirmation",
+                "ValidationURL": "{{your_url}}/validation"
             }
         },
         function (error, response, body) {
@@ -96,8 +96,8 @@ app.get('/balance', access, (req, resp) => {
                 "PartyA": "600383",
                 "IdentifierType": "4",
                 "Remarks": "TestAPIBal",
-                "QueueTimeOutURL": "http://197.248.86.122:801/bal_timeout",
-                "ResultURL": "http://197.248.86.122:801/bal_result"
+                "QueueTimeOutURL": "{{your_url}}/bal_timeout",
+                "ResultURL": "{{your_url}}/bal_result"
             }
         },
         function (error, response, body) {
