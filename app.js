@@ -8,6 +8,9 @@ app.get('/', (req, res) => {
     res.send("You're home. Welcome")
 })
 
+// your base url
+const base_url = 'http://192.168.100.2:8080'
+
 app.get('/access_token', access, (req, res) => {
     res.status(200).json({ access_token: req.access_token })
 })
@@ -16,8 +19,7 @@ app.get('/register', access, (req, resp) => {
     let url = "https://sandbox.safaricom.co.ke/mpesa/c2b/v1/registerurl"
     let auth = "Bearer " + req.access_token
 
-    request(
-        {
+    request({
             url: url,
             method: "POST",
             headers: {
@@ -26,11 +28,11 @@ app.get('/register', access, (req, resp) => {
             json: {
                 "ShortCode": "600383",
                 "ResponseType": "Complete",
-                "ConfirmationURL": "{{your_url}}/confirmation",
-                "ValidationURL": "{{your_url}}/validation"
+                "ConfirmationURL": `${base_url}/confirmation`,
+                "ValidationURL": `${base_url}/validation`
             }
         },
-        function (error, response, body) {
+        function(error, response, body) {
             if (error) { console.log(error) }
             resp.status(200).json(body)
         }
@@ -52,8 +54,7 @@ app.get('/simulate', access, (req, res) => {
     let url = "https://sandbox.safaricom.co.ke/mpesa/c2b/v1/simulate"
     let auth = "Bearer " + req.access_token
 
-    request(
-        {
+    request({
             url: url,
             method: "POST",
             headers: {
@@ -67,11 +68,10 @@ app.get('/simulate', access, (req, res) => {
                 "BillRefNumber": "TestAPI"
             }
         },
-        function (error, response, body) {
+        function(error, response, body) {
             if (error) {
                 console.log(error)
-            }
-            else {
+            } else {
                 res.status(200).json(body)
             }
         }
@@ -82,8 +82,7 @@ app.get('/balance', access, (req, resp) => {
     let url = "https://sandbox.safaricom.co.ke/mpesa/accountbalance/v1/query"
     let auth = "Bearer " + req.access_token
 
-    request(
-        {
+    request({
             url: url,
             method: "POST",
             headers: {
@@ -96,15 +95,14 @@ app.get('/balance', access, (req, resp) => {
                 "PartyA": "600383",
                 "IdentifierType": "4",
                 "Remarks": "TestAPIBal",
-                "QueueTimeOutURL": "{{your_url}}/bal_timeout",
-                "ResultURL": "{{your_url}}/bal_result"
+                "QueueTimeOutURL": `${base_url}/bal_timeout`,
+                "ResultURL": `${base_url}/bal_result`
             }
         },
-        function (error, response, body) {
+        function(error, response, body) {
             if (error) {
                 console.log(error)
-            }
-            else {
+            } else {
                 resp.status(200).json(body)
             }
         }
@@ -125,10 +123,9 @@ app.post('/bal_timeout', (req, resp) => {
 function access(req, res, next) {
     // access token
     let url = "https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials"
-    let auth = new Buffer("85MRpefVx4EdgWshx8cTrBt16ssYRxTg:JE9GqoasQcKL9e2W").toString('base64');
+    let auth = Buffer.from("85MRpefVx4EdgWshx8cTrBt16ssYRxTg:JE9GqoasQcKL9e2W").toString('base64');
 
-    request(
-        {
+    request({
             url: url,
             headers: {
                 "Authorization": "Basic " + auth
@@ -137,8 +134,7 @@ function access(req, res, next) {
         (error, response, body) => {
             if (error) {
                 console.log(error)
-            }
-            else {
+            } else {
                 // let resp = 
                 req.access_token = JSON.parse(body).access_token
                 next()
@@ -147,9 +143,9 @@ function access(req, res, next) {
     )
 }
 
-app.listen(80, (err, live) => {
+app.listen(8080, (err, live) => {
     if (err) {
         console.error(err)
     }
-    console.log("Server running on port 80")
+    console.log("Server running on port 8080")
 });
