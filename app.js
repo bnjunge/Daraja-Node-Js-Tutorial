@@ -19,7 +19,7 @@ const headers = {
 
 app.get('/', (req, res) => {
     let date = new Date()
-    let timestamp = date.getDate() + "" + "" + date.getMonth() + "" + "" + date.getFullYear() + "" + "" + date.getHours() + "" + "" + date.getMinutes() + "" + "" + date.getSeconds()
+    let timestamp = date.getDate() + "" + "" + date.getMonth()+1 + "" + "" + date.getFullYear() + "" + "" + date.getHours() + "" + "" + date.getMinutes() + "" + "" + date.getSeconds()
 
     res.status(200).json({ message: "We're up and running. Happy Coding", time: new Buffer.from(timestamp).toString('base64'), token: headers })
 })
